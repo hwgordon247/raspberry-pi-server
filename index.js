@@ -16,6 +16,17 @@ app.get('/restart', function(request, response) {
     response.send('Hello from Express!')
 });
 
+app.get('/shutdown', function(request, response) {
+    child = exec("sudo shutdown -h now", function (error, stdout, stderr) {
+        sys.print('stdout: ' + stdout);
+        sys.print('stderr: ' + stderr);
+        if (error !== null) {
+            console.log('exec error: ' + error);
+        }
+    });
+    response.send('Hello from Express!')
+});
+
 app.listen(port, function(err) {
     if (err) {
         return console.log('something bad happened', err)
