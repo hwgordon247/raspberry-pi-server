@@ -1,6 +1,7 @@
 {
   "name": "node-api",
   "main": "index.js",
+  "version": "0.1.0",
   "description": "basic server for raspberry pi",
   "scripts": {
       "start": "node index.js"
