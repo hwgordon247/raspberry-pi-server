@@ -1,6 +1,7 @@
 {
   "name": "node-api",
   "main": "index.js",
+  "description": "basic server for raspberry pi",
   "dependencies": {
     "express": "^4.14.1"
   }
