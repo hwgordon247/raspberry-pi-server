@@ -5,7 +5,7 @@ var sys = require('sys')
 var exec = require('child_process').exec;
 var child;
 
-app.get('/yo', (request, response) => {
+app.get('/yo', function(request, response) {
     child = exec("pwd", function (error, stdout, stderr) {
         sys.print('stdout: ' + stdout);
         sys.print('stderr: ' + stderr);
@@ -14,12 +14,12 @@ app.get('/yo', (request, response) => {
         }
     });
     response.send('Hello from Express!')
-})
+});
 
-app.listen(port, (err) => {
+app.listen(port, function(err) {
     if (err) {
         return console.log('something bad happened', err)
     }
 
     console.log(`server is listening on ${port}`)
-})
+});
