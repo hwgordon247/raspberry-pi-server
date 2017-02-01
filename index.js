@@ -27,6 +27,10 @@ app.get('/shutdown', function(request, response) {
     response.send('Hello from Express!')
 });
 
+app.get('/test', function(request, response) {
+    response.send('Do you read me?!?!');
+});
+
 app.listen(port, function(err) {
     if (err) {
         return console.log('something bad happened', err)
