@@ -5,8 +5,8 @@ var sys = require('sys')
 var exec = require('child_process').exec;
 var child;
 
-app.get('/yo', function(request, response) {
-    child = exec("pwd", function (error, stdout, stderr) {
+app.get('/restart', function(request, response) {
+    child = exec("sudo reboot", function (error, stdout, stderr) {
         sys.print('stdout: ' + stdout);
         sys.print('stderr: ' + stderr);
         if (error !== null) {
