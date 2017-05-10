@@ -13,7 +13,7 @@ app.get('/restart', function(request, response) {
             console.log('exec error: ' + error);
         }
     });
-    response.send('Hello from Express!')
+    response.send('Restarting!')
 });
 
 app.get('/shutdown', function(request, response) {
@@ -24,7 +24,7 @@ app.get('/shutdown', function(request, response) {
             console.log('exec error: ' + error);
         }
     });
-    response.send('Hello from Express!')
+    response.send('Shutting down!')
 });
 
 app.get('/test', function(request, response) {
