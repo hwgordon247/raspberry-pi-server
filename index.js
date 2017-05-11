@@ -28,7 +28,7 @@ app.get('/shutdown', function(request, response) {
 });
 
 app.get('/test', function(request, response) {
-    response.send('Do you read me?!?!');
+    response.send(true);
 });
 
 app.listen(port, function(err) {
